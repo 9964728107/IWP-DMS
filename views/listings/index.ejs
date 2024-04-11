@@ -1,0 +1,95 @@
+<% layout("/layouts/boilerplate") %>
+<head>
+    
+<style>
+#filters{
+    margin-top: 1rem;
+    display: flex;
+   
+    flex-wrap: nowrap;
+
+}
+.filter{
+    text-align: center;
+    margin-left: 2rem;
+    opacity: 0.7;
+}
+.filter:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+    <!-- <h3>All list</h3> -->
+    <div id="filters" >
+        <div class="filter">
+        <div>    <i class="fa-solid fa-fire"></i></div>
+            <small>Trending</small>
+        </div>
+    
+        <div class="filter">
+        <div> <i class="fa-solid fa-bed"></i></div>
+            <small>Rooms</small>
+        </div>
+        <div class="filter">
+            <div> <i class="fa-solid fa-city"></i></div>
+            <small>Iconic cities</small>
+        </div>
+        
+        <div class="filter">
+            <div> <i class="fa-solid fa-mountain"></i></div>
+            <small>Mountains</small>
+        </div>
+        <div class="filter">
+            <div> <i class="fa-brands fa-fort-awesome-alt"></i></div>
+            <small>Castle</small>
+        </div>
+        
+        <div class="filter">
+            <div><i class="fa-solid fa-campground"></i></div>
+            <small>Camping</small>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-cow"></i></div>
+            <small>Farms</small>
+        </div>
+     
+    </div>
+    
+    
+    
+<br>
+<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3" > 
+    <% let i=1 %>
+<% for( let each of allListing) { %>
+   
+    <a href="/listing/<%= each._id %>" class="listingLink">
+<div class="card col listing-card " >
+    <% if (each.image.url) { %>
+    <img src="<%= each.image.url %>" class="card-img-top" alt="listing image" style="height: 20rem;">
+    <% } %>
+    <% if (!each.image.url) { %>
+    <img src="<%= each.image %>" class="card-img-top" alt="listing image" style="height: 20rem;">
+    <% } %>
+    
+     <div class="card-img-overlay" style="color: rgb(249, 250, 250); font-size: 1.5rem;"><%=each.description %></div>
+     <% i++ %>
+    <div class="card-body">
+        <p class="card-text">
+           <b><%= each.title %></b> <br>
+            &#x20B9;<%= each.price.toLocaleString("en-IN") %>/night
+        </p>
+    </div>
+</div>
+</a>
+<% } %>
+</div>
+
+    <!-- <ul>
+        <% for( let each of allListing) { %>
+            <li><a href="/listing/<%= each._id %>"><%= each.title %></a></li>
+        
+        <% } %>
+    </ul> -->
+</body>

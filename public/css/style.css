@@ -1,0 +1,116 @@
+body{
+    background-color: aliceblue;
+    padding: 0px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    flex: 1;
+}
+
+.navbar{
+    height: 5rem;
+    
+}
+.fa-compass{
+    font-size: 2rem;
+    color: #fe424d;
+    margin-left: 1rem;
+}
+.nav-link{
+    color:#222222 !important;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.navbar-nav{
+    margin-left: 5rem;
+}
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+   
+}
+.f-info-socials,.f-info-links{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.f-info-links{
+width: 100%;
+}
+.fa-brands{
+    color: #222222;
+   font-size: 1.3rem;
+   margin-left: 1rem;
+}
+.f-info{
+    text-align: center;
+    display: flex;
+    height: 8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+footer{
+    background-color: rgb(219, 219, 219);
+    padding: 1rem;
+}
+
+/* cards */
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+.card-img-top{
+   border-radius: 0.6rem !important;
+   width: 100% !important;
+}
+.card-body{
+    padding:0 !important;
+}
+.car-text p{
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+}
+.listingLink{
+    text-decoration: none;
+}
+
+/* card Effect */
+.card-img-overlay{
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+    
+}
+.card-img-overlay:hover {
+    /* color: black !important; */
+    opacity: 1;
+    background-color: #c2c2c220;
+    transition: 0.4s ease-in-out;
+}
+
+.add-btn{
+    background-color: #fe424d   !important;
+    border: none !important;
+}
+.add-btn:hover{
+    background-color: #ff7a83f6 !important;
+    transition: 0.01s;
+}
+
+/* show */
+.show-img{
+    height: 30vh;
+    border-radius: 0.6rem !important;
+}
+.btns{
+    display: flex;
+
+}
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
+}

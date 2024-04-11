@@ -1,0 +1,63 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="row">
+    <div class="col-8 offset-2">
+    <h3>Creating new listing</h3>
+    <form action="/listing" method="POST" novalidate class="needs-validation" enctype="multipart/form-data" >
+        <div>
+            <label for="listing[title]" class="form-label">Title</label>
+           <input required type="text" placeholder="Add a Catchy title" name="listing[title]"  class="form-control">
+           <div class="valid-feedback">Title looks good</div>
+          <div class="invalid-feedback" >Please enter Better title</div>
+       </div>
+
+        <div> 
+        <label  for="listing[description]" class="form-label">Description</label>
+        <textarea required type="text" name="listing[description]" id="" cols="30" rows="3" class="form-control"></textarea>
+            <div class="valid-feedback">Awesome Description</div>
+            <div class="invalid-feedback">Make The Description Shorter</div>
+      </div>
+
+        <!-- <div>
+        <label for="image" class="form-label">Image URL</label>
+        <input type="text" placeholder="enter image url" name="listing[image]" class="form-control">
+        </div> -->
+
+        <div>
+          <label for="image" class="form-label">Upload Image</label>
+          <input type="file" placeholder="enter image url" name="listing[image]" class="form-control">
+        </div>
+
+        <div class="row">
+          <div class="mb-3 col-md-4">
+         
+            <label for="price" class="form-label" >Price</label>
+            <input required placeholder="1200" name="listing[price]" type="text" class="form-control">
+                <div class="valid-feedback">Fantastic</div>
+                <div class="invalid-feedback">Price should Be valid</div>
+          
+          </div>
+
+            <div class="mb-3 col-md-8">
+            <label for="country" class="form-label" >Country</label>
+            <input required placeholder="enter country" name="listing[country]" class="form-control">
+                <div class="valid-feedback">Awesome</div>
+                <div class="invalid-feedback">Please enter Valid one</div>
+          </div>
+
+        </div>
+
+        <div>
+            <label for="location" class="form-label">Location</label>
+            <input required placeholder="enter location" name="listing[location]" class="form-control">
+            <div class="valid-feedback">Awesome</div>
+            <div class="invalid-feedback">Please enter Valid one</div>
+        </div>
+        
+  <br>
+   <button class="btn btn-dark add-btn">Add</button> 
+    </form>
+    </div>
+    </div><br>
+    <s ipt src="/public/js/script.js"></script>
+</body>
